@@ -2,6 +2,11 @@
 
 Blood Circle is a **microservices-based web application** developed as part of the 3rd Year – 1st Semester **Service Oriented Computing (SOC)** module. It streamlines blood donation processes by connecting donors, recipients, hospitals, and event organizers.
 
+## Project Resources / Documentation
+
+📁 [Blood Circle Project Folder](https://mysliit-my.sharepoint.com/:f:/g/personal/it22273376_my_sliit_lk/IgCQklVuzHwZR7fQV21qUKGLAQWaJi8Ese8O-Qnmc8je0wY?e=ftAg6I)
+
+
 ## 🚀 Features
 - Secure user authentication & role-based access (Donor, Recipient, Event Organizer, Admin)
 - Donor dashboard: Profile, donation history, eligibility, find requests
