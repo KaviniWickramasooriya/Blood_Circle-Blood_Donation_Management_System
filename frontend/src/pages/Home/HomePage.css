@@ -1,0 +1,394 @@
+.homepage-container {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero-section-custom {
+  position: relative;
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(230, 57, 70, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero-content-box {
+  max-width: 800px;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-content-box h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content-box p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.custom-btn {
+  cursor: pointer;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.custom-btn-primary {
+  background-color: #b02e3c;
+  color: #fff;
+  border: none;
+}
+
+.custom-btn-primary:hover {
+  background-color: #ce4853; 
+}
+
+.custom-btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.custom-btn-secondary:hover,
+.custom-btn-secondary.active {
+  background-color: #fff;
+  color: #d92d2d;
+}
+
+/* ---------------- Why Donate Section ---------------- */
+.why-donate-section {
+  padding: 70px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.why-donate-title {
+  font-size: 2.2rem;
+  color: #d92d2d;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.why-donate-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.why-donate-card {
+  background: white;
+  width: 300px;
+  border-radius: 20px;
+  padding: 40px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-donate-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.why-donate-icon {
+  font-size: 4rem;
+  color: #d92d2d;
+  margin-bottom: 20px;
+}
+
+.why-donate-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.why-donate-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ---------------- Our Mission ---------------- */
+.our-mission-section {
+  padding: 80px 20px;
+  background: #b9b1b1;
+  text-align: center;
+}
+
+.our-mission-section h2 {
+  font-size: 2.2rem;
+  color: #d92d2d;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.our-mission-section p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* ---------------- Upcoming Events ---------------- */
+.events-section {
+  padding: 20px 20px;
+  padding-top: 60px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.events-title {
+  font-size: 2.2rem;
+  color: #d92d2d;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+
+.event-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.single-event-card {
+  width: 330px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.single-event-card:hover {
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+}
+
+.single-event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.single-event-card h3 {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: #d92d2d;
+}
+
+.single-event-card p {
+  font-size: 1rem;
+  margin: 0 20px 10px;
+  color: #555;
+}
+
+/* ---------------- Contact Section ---------------- */
+.contact-section {
+  background: #fff5f5;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  color: #d92d2d;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  width: 280px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover{
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #d92d2d;
+  margin-bottom: 15px;
+}
+
+#home,
+#why-donate,
+#mission,
+#events,
+#contact {
+  scroll-margin-top: 100px; 
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Close Button inside modal content */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d92d2d;
+  font-weight: bold;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  color: #b02e3c;
+}
+
+/* Event Form modal specific styles */
+.event-form-modal h2 {
+  color: #d92d2d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blood-form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 600;
+}
+
+.blood-form input,
+.blood-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.blood-form textarea {
+  min-height: 70px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: #b02e3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ce4853;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .hero-content-box h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content-box p {
+    font-size: 1.1rem;
+  }
+
+  .why-donate-card,
+  .single-event-card {
+    width: 90%;
+  }
+
+  .why-donate-card-container,
+  .event-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,31 @@
+.counter-card {
+  border: 2px solid #b91c1c; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.counter-card:hover {
+  border-color: #991b1b; 
+  background-color: #fef2f2; 
+  transform: scale(1.02); /* Slight scale-up for interactivity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.bg-red {
+  background-color: #b91c1c; 
+  border-bottom: 1px solid #991b1b;
+}
+
+.counter-card .card-body {
+  background-color: #f9fafb; 
+}
+
+.counter-card .card-title {
+  color: #1f2937; 
+  font-weight: bold;
+}
+
+.counter-card .card-text {
+  color: #4b5563; 
+}

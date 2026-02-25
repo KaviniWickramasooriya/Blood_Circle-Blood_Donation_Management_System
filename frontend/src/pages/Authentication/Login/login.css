@@ -1,0 +1,241 @@
+.loginPage__container {
+  width: 480px;
+  background: rgba(222, 104, 104, 0.95);
+  color: #fff;
+  border-radius: 14px;
+  padding: 40px 35px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+  animation: loginFadeIn 0.6s ease;
+  margin: 0 auto;
+}
+
+.loginPage__header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.loginPage__header i {
+  font-size: 50px;
+  margin-bottom: 8px;
+}
+
+.loginPage__header h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.loginPage__header p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 5px;
+}
+
+.loginPage__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginPage__title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.loginPage__inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.loginPage__inputBox input {
+  width: 100%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 40px;
+  font-size: 15px;
+  color: #fff;
+  padding: 14px 45px 14px 18px;
+  transition: all 0.3s ease;
+}
+
+.loginPage__inputBox input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.loginPage__inputBox input:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.loginPage__icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+.loginPage__rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin: -5px 0 15px;
+}
+
+.loginPage__rememberForgot label {
+  display: flex;
+  align-items: center;
+}
+
+.loginPage__rememberForgot input {
+  margin-right: 5px;
+}
+
+.loginPage__rememberForgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.loginPage__rememberForgot a:hover {
+  text-decoration: underline;
+}
+
+.loginPage__roles {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.loginPage__roleBtn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.loginPage__roleBtn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.loginPage__roleBtn.active {
+  background: #fff;
+  color: #de6868;
+  transform: scale(1.05);
+}
+
+.loginPage__loginBtn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #de6868;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginPage__loginBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.loginPage__loginBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loginPage__registerLink {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.loginPage__registerLink a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.loginPage__registerLink a:hover {
+  text-decoration: underline;
+}
+
+.loginPage__footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.85;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 12px;
+}
+
+.loginPage__footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 6px;
+}
+
+.loginPage__footerLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.loginPage__footerLinks a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.loginPage__loadingOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  z-index: 1000;
+}
+
+@keyframes loginFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .loginPage__container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .loginPage__roles {
+    flex-direction: column;
+  }
+
+  .loginPage__roleBtn {
+    width: 100%;
+  }
+}

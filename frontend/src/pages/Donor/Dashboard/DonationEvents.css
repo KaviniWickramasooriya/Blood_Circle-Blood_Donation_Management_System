@@ -1,0 +1,237 @@
+.donation-events {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.donation-events-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  margin-top: 100px;
+  background: linear-gradient(to right, #e63946, #d32f3e);
+  color: white;
+}
+
+.donation-events-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.donation-events-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #999;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #e63946;
+}
+
+.status-message.error {
+  color: #e63946;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.district-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.district-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.district-header {
+  background: linear-gradient(to right, #e63946, #d32f3e);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.district-icon {
+  font-size: 1.2rem;
+}
+
+.district-title {
+  margin: 0;
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+
+.event-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.event-icon {
+  color: #e63946;
+  font-size: 1.2rem;
+}
+
+.event-title {
+  margin: 0;
+  color: #e63946;
+  font-size: 1.2rem;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.detail-icon {
+  color: #e63946;
+  font-size: 0.9rem;
+  width: 16px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 60px;
+}
+
+.detail-value {
+  color: #555;
+}
+
+.event-description {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.no-events {
+  text-align: center;
+  color: #666;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+}
+
+.status-message {
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.event-card.highlighted {
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+@media (max-width: 768px) {
+  .donation-events-header {
+    margin-top: 80px;
+    padding: 40px 20px 20px;
+  }
+
+  .donation-events-header h1 {
+    font-size: 2rem;
+  }
+
+  .donation-events-content {
+    padding: 10px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .district-header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .district-title {
+    font-size: 1.3rem;
+  }
+}

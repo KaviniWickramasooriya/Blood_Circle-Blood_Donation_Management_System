@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section, header {
+  scroll-margin-top: 200px;
+}
+
+.donor-navbar {
+  background: #2a2a2a;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  gap: 30px; 
+}
+
+.logo img {
+  width: 80px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.logo span {
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links .active {
+  color: #e63946;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background: #444;
+  cursor: pointer;
+  transform: translateX(5px);
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 15px; 
+  align-items: center;
+}
+
+.donate-form-btn,
+.find-events-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.donate-form-btn:hover,
+.find-events-btn:hover {
+  background: #d32f3e;
+  transform: scale(1.05);
+}
+
+/* Logout button */
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .donor-navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #2a2a2a;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+  }
+
+  .find-events-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

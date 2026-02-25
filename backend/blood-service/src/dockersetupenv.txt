@@ -1,0 +1,12 @@
+#   PORT=3002
+#   DB_NAME=blood_circle_db
+#   DB_USER=root
+#   DB_PASSWORD=
+#   DB_HOST=host.docker.internal
+#   DB_PORT=3306
+#   DB_DIALECT=mysql
+
+#   SERVICE_NAME=blood-service
+
+#   EMAIL_USER=iresheranga2020al@gmail.com
+#   EMAIL_PASS=aknrtiklxrrrytng

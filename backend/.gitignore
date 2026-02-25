@@ -1,0 +1,12 @@
+/api-gateway/node_modules
+/blood-service/node_modules
+/event-service/node_modules
+/user-service/node_modules
+BloodCircleTokenGitHub.txt
+BloodCircleTokenGitHub.txt
+
+
+/api-gateway/.env
+/blood-service/.env
+/event-service/.env
+/user-service/.env  

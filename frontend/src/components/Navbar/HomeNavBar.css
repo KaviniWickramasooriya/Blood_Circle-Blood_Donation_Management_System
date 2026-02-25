@@ -1,0 +1,114 @@
+.custom-nav {
+  background: #2b2a2a;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.custom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 80px;
+  vertical-align: middle;
+}
+
+.logo span {
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.custom-nav-links-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.custom-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #ffcccb;
+  cursor: pointer;
+}
+
+/* Donate Button */
+.custom-donate-btn {
+  background-color: #b2b1b1;
+  border: none;
+  padding: 0.5rem 1.3rem;
+  border-radius: 4px;
+  color: rgb(134, 16, 16);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-donate-btn:hover {
+  background-color: #b14141;
+  color: #f0f0f0;
+}
+
+/* Login Icon Button */
+.login-icon-btn {
+  background: transparent;
+  border: none;
+  color: #c54d4d;
+  cursor: pointer;
+  margin-left: 50px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-icon-btn:hover {
+  color: #ffcccb;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-nav {
+    padding: 15px 25px;
+  }
+
+  .custom-nav-links {
+    display: none;
+  }
+
+  .custom-donate-btn {
+    padding: 0.4rem 1rem;
+  }
+
+  .login-icon-btn {
+    font-size: 22px;
+  }
+}

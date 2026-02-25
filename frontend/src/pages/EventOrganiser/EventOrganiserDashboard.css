@@ -1,0 +1,852 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* EOD Dashboard Container */
+.eod-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* EOD Header */
+.eod-dashboard-header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin: 0;
+  padding-top: 0;
+}
+
+.eod-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eod-header-left {
+  flex: 1;
+}
+
+.eod-dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eod-title-icon {
+  font-size: 2.2rem;
+}
+
+.eod-dashboard-subtitle {
+  color: #718096;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.eod-logout-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.eod-logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.eod-logout-icon {
+  font-size: 1.2rem;
+}
+
+/* EOD Stats Grid */
+.eod-stats-grid {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.eod-stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.eod-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.eod-stat-card.eod-total::before {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.eod-stat-card.eod-past::before {
+  background: linear-gradient(90deg, #6b7280, #4b5563);
+}
+
+.eod-stat-card.eod-upcoming::before {
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+}
+
+.eod-stat-card.eod-pending::before {
+  background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.eod-stat-card.eod-approved::before {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.eod-stat-card.eod-rejected::before {
+  background: linear-gradient(90deg, #fa709a, #fee140);
+}
+
+.eod-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.eod-stat-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea20, #764ba220);
+  border-radius: 12px;
+}
+
+.eod-stat-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.eod-stat-info p {
+  color: #718096;
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* EOD Controls Section */
+.eod-controls-section {
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.eod-search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eod-search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+}
+
+.eod-search-box input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.eod-search-box input:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.eod-filter-group {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.eod-filter-btn {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #718096;
+}
+
+.eod-filter-btn:hover {
+  background: #f7fafc;
+  color: #667eea;
+}
+
+.eod-filter-btn.eod-active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.eod-toggle-past {
+  display: flex;
+  align-items: center;
+}
+
+.eod-toggle-btn {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #718096;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.eod-toggle-btn:hover {
+  background: #f7fafc;
+  color: #667eea;
+}
+
+.eod-toggle-btn.eod-active {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+}
+
+.eod-create-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+  white-space: nowrap;
+}
+
+.eod-create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.eod-plus-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* EOD Events Grid */
+.eod-events-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.eod-event-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.eod-event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.eod-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.eod-event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.eod-event-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  flex: 1;
+}
+
+.eod-status-badge {
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.eod-status-pending {
+  background: linear-gradient(135deg, #f093fb20, #f5576c20);
+  color: #f5576c;
+}
+
+.eod-status-approved {
+  background: linear-gradient(135deg, #4facfe20, #00f2fe20);
+  color: #0891b2;
+}
+
+.eod-status-rejected {
+  background: linear-gradient(135deg, #fa709a20, #fee14020);
+  color: #dc2626;
+}
+
+.eod-status-cancelled {
+  background: #71809620;
+  color: #475569;
+}
+
+.eod-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.eod-detail-row {
+  display: grid;
+  grid-template-columns: 30px auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.eod-detail-icon {
+  font-size: 1.1rem;
+}
+
+.eod-detail-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.eod-detail-value {
+  color: #718096;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.eod-detail-row.eod-description {
+  grid-template-columns: 30px 1fr;
+}
+
+.eod-detail-row.eod-description .eod-detail-label {
+  grid-column: 2;
+}
+
+.eod-detail-row.eod-description .eod-detail-value {
+  grid-column: 2;
+  margin-top: 0.25rem;
+  line-height: 1.6;
+}
+
+.eod-rejection-reason {
+  background: #fee2e2;
+  border-left: 4px solid #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.eod-rejection-reason strong {
+  color: #991b1b;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.eod-rejection-reason p {
+  color: #7f1d1d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.eod-event-actions {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.eod-edit-btn,
+.eod-delete-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.eod-edit-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  box-shadow: 0 2px 10px rgba(79, 172, 254, 0.3);
+}
+
+.eod-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+.eod-delete-btn {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+  box-shadow: 0 2px 10px rgba(250, 112, 154, 0.3);
+}
+
+.eod-delete-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4);
+}
+
+/* EOD No Events */
+.eod-no-events {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.eod-no-events-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.eod-no-events h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.eod-no-events p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+/* EOD Modal */
+.eod-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.eod-modal-content {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: eod-slideUp 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+@keyframes eod-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eod-modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea10, #764ba210);
+  border-radius: 20px 20px 0 0;
+}
+
+.eod-modal-header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.eod-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #718096;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.eod-close-btn:hover {
+  background: #f7fafc;
+  color: #2d3748;
+}
+
+.eod-event-form {
+  padding: 2rem;
+  background: #fafbfc;
+}
+
+.eod-form-group {
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.eod-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.eod-form-group input,
+.eod-form-group textarea,
+.eod-form-group select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: white;
+}
+
+.eod-form-group input:focus,
+.eod-form-group textarea:focus,
+.eod-form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.eod-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.eod-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.eod-form-row .eod-form-group {
+  margin-bottom: 0;
+}
+
+.eod-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.eod-cancel-btn {
+  flex: 1;
+  background: #f7fafc;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+  padding: 0.875rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.eod-cancel-btn:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.eod-submit-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.eod-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* EOD Loading */
+.eod-loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.eod-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: eod-spin 1s linear infinite;
+}
+
+@keyframes eod-spin {
+  to { transform: rotate(360deg); }
+}
+
+.eod-loading-spinner p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* EOD Error Message */
+.eod-error-message {
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem;
+  background: #fee2e2;
+  border-left: 4px solid #dc2626;
+  border-radius: 10px;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/* EOD Responsive Design */
+@media (max-width: 768px) {
+  .eod-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .eod-header-left {
+    width: 100%;
+  }
+
+  .eod-dashboard-title {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .eod-logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .eod-stats-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .eod-controls-section {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .eod-search-box {
+    width: 100%;
+  }
+
+  .eod-filter-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .eod-filter-btn {
+    flex: 1;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .eod-toggle-past {
+    width: 100%;
+  }
+
+  .eod-toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .eod-create-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .eod-events-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 2rem;
+  }
+
+  .eod-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .eod-modal-content {
+    margin: 1rem;
+  }
+
+  .eod-event-form {
+    padding: 1.5rem;
+  }
+
+  .eod-form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .eod-dashboard-title {
+    font-size: 1.25rem;
+  }
+
+  .eod-title-icon {
+    font-size: 1.5rem;
+  }
+
+  .eod-stat-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .eod-stat-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .eod-event-name {
+    font-size: 1.1rem;
+  }
+
+  .eod-detail-row {
+    grid-template-columns: 25px auto 1fr;
+  }
+}
