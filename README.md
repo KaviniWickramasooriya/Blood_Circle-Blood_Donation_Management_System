@@ -26,7 +26,7 @@ Blood Circle is a **microservices-based web application** developed as part of t
 - Jenkins (CI/CD pipelines)
 - Docker (containerization)
 
-## My Contributions (Kavini Wickramasooriya)
+## My Contributions
 - **Frontend:**
   - Home page (landing, hero section, features showcase, responsive design)
   - Donor pages (dashboard, profile, history, requests)
